@@ -22,7 +22,7 @@ function App() {
           count is {count}
         </button>
         <p>
-          Salut Manu !
+          Salut Manu !!
         </p>
       </div>
       <p className="read-the-docs">

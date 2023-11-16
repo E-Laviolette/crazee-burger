@@ -1,12 +1,9 @@
-import { useState } from "react"
-import LoginPage from "./components/LoginPage"
+import LoginPage from "./components/pages/login/LoginPage"
 
 function App() {
     // state
 
     // comportement
-
-
     
     // render
     return (

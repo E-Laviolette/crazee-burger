@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function OrderPage() {
     // state
@@ -10,6 +11,9 @@ export default function OrderPage() {
     return (
         <div>
             OrderPage
+            <Link to="/">
+                <button>Retourner à la page d'accueil</button>
+            </Link>
         </div>
     )
 }

@@ -1,17 +1,14 @@
+import { Route, Routes } from "react-router-dom"
 import LoginPage from "./components/pages/login/LoginPage"
+import OrderPage from "./components/pages/order/OrderPage"
 
 function App() {
-    // state
-
-    // comportement
-    
-    // render
     return (
-        <div>
-            <LoginPage />
-
-
-        </div>
+        <Routes>
+            <Route path="/" element={<LoginPage />} />
+            <Route path="/order" element={<OrderPage />} />
+            {/* <Route path="/error" element={<ErrorPage />} /> */}
+        </Routes>
     )
 }
 

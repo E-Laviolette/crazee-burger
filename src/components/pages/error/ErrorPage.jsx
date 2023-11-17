@@ -3,7 +3,7 @@ export default function ErrorPage() {
     // state
 
 
-    // comportement
+    // comportements
 
 
     // render
@@ -11,6 +11,5 @@ export default function ErrorPage() {
         <div>
             ErrorPage
         </div>
-
     )
 }

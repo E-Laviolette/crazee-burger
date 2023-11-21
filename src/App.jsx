@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import LoginPage from "./components/pages/login/LoginPage"
 import ("./App.css")
 
@@ -9,13 +8,11 @@ function App() {
     
     // render
     return (
-        <AppStyled>
+        <div>
             <LoginPage />
-        </AppStyled>
+        </div>
     )
 }
 
-const AppStyled = styled.div`
-  
-`;
+
 export default App

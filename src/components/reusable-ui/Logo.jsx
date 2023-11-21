@@ -7,7 +7,7 @@ export default function Logo() {
 
         <LogoStyled>
             <h1>CRAZEE</h1>
-            <img className="backgroundColor: black;" src="/images/logo-orange.png" alt="Logo"></img>
+            <img src="/images/logo-orange.png" alt="" />
             <h1>BURGER</h1>
         </LogoStyled>
     )
@@ -15,16 +15,15 @@ export default function Logo() {
 
 
 const LogoStyled = styled.div`
+    border: 1px solid red;
     display: flex;
     align-items: center;
     transform: scale(2.5);
-    border: 1px solid red;
-    background-color: transparent;
 
     h1 {
         display: inline;
         text-align: center;
-        color: ${theme.colors.primary};
+        color: orange;
         font-size: 36px;
         line-height: 1em;
         font-weight: 700;

@@ -66,4 +66,3 @@ const colors = {
     weights,
     spacing,
   }
-  

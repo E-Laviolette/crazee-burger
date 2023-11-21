@@ -1,12 +1,4 @@
-@font-face {
-  font-family: 'Amatic-SC';
-  src: url('/fonts/AmaticSC-Bold.ttf') format('ttf'),
-       url('/fonts/AmaticSC-Regular') format('ttf');
-  /* Ajoutez d'autres formats si nécessaire */
-  font-family: 'OpenSans';
-  src: url('/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf') format('ttf'),
-       url('/fonts/OpenSans-VariableFont_wdth,wght.ttf') format('ttf');
-}
+
 
 
 body {

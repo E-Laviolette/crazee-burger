@@ -1,5 +1,6 @@
+import styled from "styled-components";
 import LoginPage from "./components/pages/login/LoginPage"
-
+import ("./App.css")
 function App() {
     // state
 
@@ -7,12 +8,13 @@ function App() {
     
     // render
     return (
-        <div>
+        <AppStyled>
             <LoginPage />
-
-
-        </div>
+        </AppStyled>
     )
 }
 
+const AppStyled = styled.div`
+  
+`;
 export default App

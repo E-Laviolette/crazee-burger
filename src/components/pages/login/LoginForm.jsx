@@ -35,13 +35,13 @@ export default function LoginForm() {
             </div>
             <button className="button-with-icon">
                 <span>Accéder à mon espace</span>
-                <IoChevronForward />
+                <IoChevronForward className="icon" />
             </button>
         </LoginFormStyled>
   )
 }
 
-const LoginFormStyled = styled.div`
+const LoginFormStyled = styled.form`
     text-align: center;
     max-width: 500px;
     min-width: 400px;
@@ -85,7 +85,7 @@ const LoginFormStyled = styled.div`
             border: none;
             font-size: 15px;
             color: #17161a;
-            /* width: 100%; */
+            width: 100%;
         }
 
         &::placeholder {

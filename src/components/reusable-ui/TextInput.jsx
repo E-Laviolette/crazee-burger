@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default function Input({value, onChange, Icon, className, ...restProps}) {
+export default function TextInput({value, onChange, Icon, className, ...restProps}) {
   return (
         <InputStyled>
             {Icon && Icon}

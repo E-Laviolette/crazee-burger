@@ -2,16 +2,17 @@ import { useState } from 'react'
 import styled from 'styled-components';
 import { BsPersonCircle } from "react-icons/bs";
 import { IoChevronForward } from "react-icons/io5"
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginForm() {
     // state
     const [inputValue, setInputValue] = useState("")
-
+    const navigate = useNavigate() 
     // comportements
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert(`Bonjour : ${inputValue}`)
         setInputValue("")
+        navigate(`order/${inputValue}`)
     }
 
     const handleChange = (event) => {

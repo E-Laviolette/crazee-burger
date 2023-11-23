@@ -24,9 +24,10 @@ export default function LoginForm() {
         setInputValue(event.target.value)
     }
 
-    const handleChangePassword = (event) => {
-        setPassword(event.target.value)
-    }
+    // const handleChangePassword = (event) => {
+    //     setPassword(event.target.value)
+    // }
+
     // render
     return (
         <LoginFormStyled action="submit" onSubmit={handleSubmit}>

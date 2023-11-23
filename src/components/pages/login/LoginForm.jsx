@@ -7,6 +7,7 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import TextInput from '../../reusable-ui/TextInput';
 import PrimaryButton from '../../reusable-ui/PrimaryButton';
 import PasswordInput from '../../reusable-ui/PasswordInput';
+import { theme } from '../../../theme';
 
 export default function LoginForm() {
     // state
@@ -61,32 +62,31 @@ const LoginFormStyled = styled.form`
     max-width: 500px;
     min-width: 400px;
     margin: 0px auto;
-    padding: 2.5rem 2rem;
-    border-radius: 5px;
+    padding: 40px ${theme.spacing.lg};
+    border-radius: ${theme.borderRadius.round};
     font-family: "Amatic SC", cursive;
 
     hr {
-        border: 1.5px solid orange;
-        margin-bottom: 40px;
+        border: 1.5px solid ${theme.colors.primary};
+        margin-bottom: ${theme.gridUnit * 5}px;
     }
 
     h1 {
-        color: white;
-        font-size: 40px;
+        color: ${theme.colors.white};
+        font-size: ${theme.fonts.P5};
     }
 
     h2 {
-        color: white;
         margin: 20px 10px 10px;
-        color: white;
-        font-size: 36px;
+        color: ${theme.colors.white};
+        font-size: ${theme.fonts.P4};
     }
   
     .icon {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 15px;
+        font-size: ${theme.fonts.P0};
         margin-left: 10px;
     }
     

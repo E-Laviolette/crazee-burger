@@ -3,12 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { IoChevronForward } from "react-icons/io5"
 import { BsPersonCircle } from "react-icons/bs";
+import { RiLockPasswordLine } from "react-icons/ri";
 import TextInput from '../../reusable-ui/TextInput';
-import Button from '../../reusable-ui/Button';
+import PrimaryButton from '../../reusable-ui/PrimaryButton';
+import PasswordInput from '../../reusable-ui/PasswordInput';
 
 export default function LoginForm() {
     // state
     const [inputValue, setInputValue] = useState("")
+    const [password, setPassword] = useState("")
     const navigate = useNavigate() 
     // comportements
     const handleSubmit = (event) => {
@@ -21,6 +24,9 @@ export default function LoginForm() {
         setInputValue(event.target.value)
     }
 
+    const handleChangePassword = (event) => {
+        setPassword(event.target.value)
+    }
     // render
     return (
         <LoginFormStyled action="submit" onSubmit={handleSubmit}>
@@ -34,8 +40,15 @@ export default function LoginForm() {
                 required
                 Icon={<BsPersonCircle className="icon" />}
             />
-
-            <Button
+            {/* <PasswordInput 
+                value={password}
+                onChange={handleChangePassword}
+                placeholder={"Entrez votre mot de passe"}
+                required
+                Icon={<RiLockPasswordLine className="icon" />}
+            /> */}
+            <PrimaryButton
+                label={"Accéder à votre espace"}
                 Icon={<IoChevronForward className="icon" />}    
             />
         </LoginFormStyled>
@@ -68,4 +81,12 @@ const LoginFormStyled = styled.form`
         font-size: 36px;
     }
   
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    
 `;

@@ -13,7 +13,7 @@ export default function LoginPage() {
 }
 
 const LoginPageStyled = styled.div`
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,7 +26,7 @@ const LoginPageStyled = styled.div`
         background-position: center;
         background-blend-mode: darken;
 
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;

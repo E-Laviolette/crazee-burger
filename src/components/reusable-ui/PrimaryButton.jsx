@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
-export default function Button({Icon, ...restProps}) {
+export default function Button({label, Icon, ...restProps}) {
   return (
-    <ButtonStyled>
-        <span>Accéder à mon espace</span>
+    <PrimaryButtonStyled>
+        <span>{label}</span>
         {Icon && Icon}
         
-    </ButtonStyled>
+    </PrimaryButtonStyled>
   )
 }
 
-const ButtonStyled = styled.button`
+const PrimaryButtonStyled = styled.button`
 
         width: 100%;
         border: 1px solid red;
@@ -46,14 +46,6 @@ const ButtonStyled = styled.button`
         &:disabled {
             opacity: 0.6;
             cursor: not-allowed;
-        }
-
-        .icon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 15px;
-            margin-left: 10px;
         }
     
 `;

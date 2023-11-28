@@ -11,6 +11,6 @@ export default function NavbarLeftSide() {
 }
 
 const NavbarLeftSideStyled = styled.div`
-    background: pink
+    background: pink;
   
 `;

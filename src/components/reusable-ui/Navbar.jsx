@@ -11,19 +11,31 @@ export default function Navbar({ username }) {
 
   return (
     <NavbarStyled>
-        Navbar
-        <p>Hey {username}</p>
-        <Link to="/">
-            <button>Déconnexion</button>
-        </Link>
-        {/* <BsPersonCircle className="icon"/> */}
+        <div className='left-side'>
+            <Logo />
+        </div>
+        <div className='right-side'>
+            <p>Hey {username}</p>
+            <Link to="/">
+                <button>Déconnexion</button>
+            </Link>
+            <BsPersonCircle className="icon"/>
+        </div>
     </NavbarStyled>
   )
 }
 
 const NavbarStyled = styled.nav`
-
     background: blue;
     height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    
+    .left-side {
+        background: pink
+    }
 
+    .right-side {
+        background: purple
+    }
 `;

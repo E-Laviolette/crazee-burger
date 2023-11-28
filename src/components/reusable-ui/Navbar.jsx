@@ -4,61 +4,26 @@ import { BsPersonCircle } from "react-icons/bs";
 import { Link, useParams } from "react-router-dom";
 import Logo from './Logo';
 
-export default function Navbar() {
+export default function Navbar({ username }) {
 
-    const {username} = useParams()
+    // const {username} = useParams()
 
 
   return (
     <NavbarStyled>
-        <div className="navbarLeft">
-            <Logo  className="logo"/>
-        </div>
-        <div className="navbarRight user">
-            <div>
-                <p>Hey {username}</p>
-                <Link to="/">
-                    <button>Déconnexion</button>
-                </Link>
-            </div>
-            <BsPersonCircle className="icon"/>
-        </div>
+        Navbar
+        <p>Hey {username}</p>
+        <Link to="/">
+            <button>Déconnexion</button>
+        </Link>
+        {/* <BsPersonCircle className="icon"/> */}
     </NavbarStyled>
   )
 }
 
-const NavbarStyled = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-    /* height: 100px; */
+const NavbarStyled = styled.nav`
 
-    .navbarLeft {
-        margin-left: 20px;
+    background: blue;
+    height: 10vh;
 
-        .logo {
-            display: flex;
-            position: left;
-    
-        }
-    }
-
-    .navbarRight {
-        margin-right: 70px;
-
-    }
-    
-    .user {
-        display: flex;
-        justify-content: center;
-    }
-    .icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        height: auto;
-        width: 36px;
-    }
 `;

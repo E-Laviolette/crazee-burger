@@ -11,7 +11,9 @@ export default function NavbarLeftSide() {
 }
 
 const NavbarLeftSideStyled = styled.div`
-    background: white;
+    /* background: white; */
     /* padding-left: 20px; */
+    display: flex;
+    align-items: center;
   
 `;

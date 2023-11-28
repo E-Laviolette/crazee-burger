@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className="navbarLeft">
             <Logo  className="logo"/>
         </div>
-        <div className="user navbarRight">
+        <div className="navbarRight user">
             <div>
                 <p>Hey {username}</p>
                 <Link to="/">
@@ -31,6 +31,7 @@ const NavbarStyled = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 5px;
     /* height: 100px; */
 
     .navbarLeft {

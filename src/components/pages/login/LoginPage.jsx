@@ -34,6 +34,6 @@ const LoginPageStyled = styled.div`
   }
 
   .logo-login-page {
-    transform: scale(2.5);
+    zoom: 2.5;
   }
 `

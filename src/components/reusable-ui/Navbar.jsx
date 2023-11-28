@@ -24,5 +24,5 @@ const NavbarStyled = styled.nav`
     height: 10vh;
     display: flex;
     justify-content: space-between;
-
+  padding: 0 20px;
 `;

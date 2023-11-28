@@ -12,8 +12,9 @@ import { theme } from '../../../theme';
 export default function LoginForm() {
     // state
     const [inputValue, setInputValue] = useState("")
-    const [password, setPassword] = useState("")
+    // const [password, setPassword] = useState("")
     const navigate = useNavigate() 
+    
     // comportements
     const handleSubmit = (event) => {
         event.preventDefault();

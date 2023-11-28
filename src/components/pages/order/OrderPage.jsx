@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
-import Logo from "../../reusable-ui/Logo";
 import styled from 'styled-components';
+import Navbar from "../../reusable-ui/Navbar";
 
 export default function OrderPage() {
     // state
@@ -12,11 +12,7 @@ export default function OrderPage() {
     // render
     return (
         <div>
-            <Logo />
-            <h1>Bonjour {username}</h1>
-            <Link to="/">
-                <button>Déconnexion</button>
-            </Link>
+            <Navbar />
         </div>
     )
 }

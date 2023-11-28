@@ -3,24 +3,18 @@ import styled from 'styled-components';
 import { BsPersonCircle } from "react-icons/bs";
 import { Link, useParams } from "react-router-dom";
 import Logo from './Logo';
+import NavbarLeftSide from '../pages/order/NavbarLeftSide';
+import NavbarRightSide from '../pages/order/NavbarRightSide';
 
-export default function Navbar({ username }) {
+export default function Navbar() {
 
     // const {username} = useParams()
 
 
   return (
     <NavbarStyled>
-        <div className='left-side'>
-            <Logo />
-        </div>
-        <div className='right-side'>
-            <p>Hey {username}</p>
-            <Link to="/">
-                <button>Déconnexion</button>
-            </Link>
-            <BsPersonCircle className="icon"/>
-        </div>
+        <NavbarLeftSide />
+        <NavbarRightSide />
     </NavbarStyled>
   )
 }
@@ -30,12 +24,5 @@ const NavbarStyled = styled.nav`
     height: 10vh;
     display: flex;
     justify-content: space-between;
-    
-    .left-side {
-        background: pink
-    }
 
-    .right-side {
-        background: purple
-    }
 `;

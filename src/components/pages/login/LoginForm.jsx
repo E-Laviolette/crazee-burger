@@ -8,13 +8,19 @@ import TextInput from '../../reusable-ui/TextInput';
 import PrimaryButton from '../../reusable-ui/PrimaryButton';
 import PasswordInput from '../../reusable-ui/PasswordInput';
 import { theme } from '../../../theme';
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
+
 
 export default function LoginForm() {
     // state
     const [inputValue, setInputValue] = useState("")
+
     // const [password, setPassword] = useState("")
     const navigate = useNavigate() 
     
+    const navigate = useNavigate() 
+
     // comportements
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -36,6 +42,7 @@ export default function LoginForm() {
             <h1>Bienvenue chez nous !</h1>
             <hr />
             <h2>Connectez-vous</h2>
+
             <TextInput 
                 value={inputValue} 
                 onChange={handleChange}
@@ -55,6 +62,16 @@ export default function LoginForm() {
                 Icon={<IoChevronForward className="icon" />}    
             />
         </LoginFormStyled>
+
+            <input 
+            value={inputValue} 
+            type="text" 
+            placeholder="Entrez votre prénom" 
+            onChange={handleChange} 
+            required />
+            <button> Accéder à votre espace</button>
+        </form>
+
   )
 }
 

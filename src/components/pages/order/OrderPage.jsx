@@ -20,3 +20,11 @@ export default function OrderPage() {
 const OrderPageStyled = styled.div`
   
 `;
+
+            <h1>Bonjour {username}</h1>
+            <Link to="/">
+                <button>Déconnexion</button>
+            </Link>
+        </div>
+    )
+}

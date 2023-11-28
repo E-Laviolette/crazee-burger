@@ -20,9 +20,9 @@ const NavbarRightSideStyled = styled.div`
     padding-right: 50px;
 
   
-    .admin-button {
+    /* .admin-button {
       background: lightblue;
-    }
+    } */
 
     .profile {
       background: yellow;

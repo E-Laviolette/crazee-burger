@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
-import NavbarLeftSide from '../pages/order/NavbarLeftSide';
-import NavbarRightSide from '../pages/order/NavbarRightSide';
-import { theme } from '../../theme';
-import Logo from './Logo';
-import { refreshPage } from '../../utils/window';
+import NavbarLeftSide from './NavbarLeftSide';
+import { theme } from '../../../../theme';
+import Logo from '../../../reusable-ui/Logo';
+import { refreshPage } from '../../../../utils/window';
+import NavbarRightSide from './NavbarRightSide';
 
 export default function Navbar({username}) {
 

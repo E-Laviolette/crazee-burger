@@ -3,11 +3,12 @@ import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { theme } from "../../../theme"
 
-export default function Profile({ username }) {
+export default function Profile({username}) {
   return (
     <ProfileStyled>
       <div className="info">
-        <p>Hey, <b>{username}</b></p>
+        <p>Hey, <b>{username}</b>
+        </p>
         <Link to="/">
             <div className="description">
                 <small>Se déconnecter</small>
@@ -18,6 +19,7 @@ export default function Profile({ username }) {
         <BsPersonCircle />
       </div>
     </ProfileStyled>
+
   )
 }
 

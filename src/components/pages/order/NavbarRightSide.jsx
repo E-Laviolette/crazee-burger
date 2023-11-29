@@ -1,14 +1,12 @@
-import React from 'react'
-import { BsPersonCircle } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 import Profile from './Profile';
 
-export default function NavbarRightSide({ username }) {
+export default function NavbarRightSide({username}) {
   return (
     <NavbarRightSideStyled className='right-side'>
       {/* <div className="admin-button">Admin button</div> */}
-      <Profile />
+      <Profile username={username} />
     </NavbarRightSideStyled>
   )
 }

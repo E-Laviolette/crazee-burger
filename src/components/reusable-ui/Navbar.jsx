@@ -1,12 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
-import { BsPersonCircle } from "react-icons/bs";
-import { Link, useParams } from "react-router-dom";
-import Logo from './Logo';
 import NavbarLeftSide from '../pages/order/NavbarLeftSide';
 import NavbarRightSide from '../pages/order/NavbarRightSide';
+import { theme } from '../../theme';
 
-export default function Navbar() {
+export default function Navbar({username}) {
 
     // const {username} = useParams()
 
@@ -14,15 +12,18 @@ export default function Navbar() {
   return (
     <NavbarStyled>
         <NavbarLeftSide />
-        <NavbarRightSide />
+        <NavbarRightSide username={username}/>
     </NavbarStyled>
   )
 }
 
 const NavbarStyled = styled.nav`
-    background: blue;
+    background: ${theme.colors.white};
     height: 10vh;
     display: flex;
     justify-content: space-between;
-  padding: 0 20px;
+    padding: 0 20px;
+
+    border-top-left-radius: ${theme.borderRadius.extraRound};
+    border-top-right-radius: ${theme.borderRadius.extraRound};
 `;

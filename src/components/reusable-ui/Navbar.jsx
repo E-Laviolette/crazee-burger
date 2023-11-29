@@ -1,63 +1,35 @@
 import React from 'react'
 import styled from 'styled-components';
-import { BsPersonCircle } from "react-icons/bs";
-import { Link, useParams } from "react-router-dom";
+import NavbarLeftSide from '../pages/order/NavbarLeftSide';
+import NavbarRightSide from '../pages/order/NavbarRightSide';
+import { theme } from '../../theme';
 import Logo from './Logo';
+import { refreshPage } from '../../utils/window';
 
-export default function Navbar() {
+export default function Navbar({username}) {
 
-    const {username} = useParams()
+    // const {username} = useParams()
 
 
   return (
     <NavbarStyled>
-        <div className="navbarLeft">
-            <Logo  className="logo"/>
-        </div>
-        <div className="user navbarRight">
-            <div>
-                <p>Hey {username}</p>
-                <Link to="/">
-                    <button>Déconnexion</button>
-                </Link>
-            </div>
-            <BsPersonCircle className="icon"/>
-        </div>
+        <Logo className="logo-order-page" onClick={refreshPage}/>
+        <NavbarRightSide username={username}/>
     </NavbarStyled>
   )
 }
 
-const NavbarStyled = styled.div`
+const NavbarStyled = styled.nav`
+    background: ${theme.colors.white};
+    height: 10vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    /* height: 100px; */
+    padding: 0 20px;
 
-    .navbarLeft {
-        margin-left: 20px;
-
-        .logo {
-            display: flex;
-            position: left;
+    border-top-left-radius: ${theme.borderRadius.extraRound};
+    border-top-right-radius: ${theme.borderRadius.extraRound};
     
-        }
-    }
-
-    .navbarRight {
-        margin-right: 70px;
-
-    }
-    
-    .user {
-        display: flex;
-        justify-content: center;
-    }
-    .icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        height: auto;
-        width: 36px;
+    .logo-order-page {
+      cursor: pointer; 
     }
 `;

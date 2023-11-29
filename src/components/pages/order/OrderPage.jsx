@@ -37,3 +37,11 @@ const OrderPageStyled = styled.div`
         border-radius: ${theme.borderRadius.extraRound};
     }
 `;
+
+            <h1>Bonjour {username}</h1>
+            <Link to="/">
+                <button>Déconnexion</button>
+            </Link>
+        </div>
+    )
+}

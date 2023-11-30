@@ -12,7 +12,7 @@ export default function Menu() {
         <MenuStyled className="menu">
             {menu.map((product) => {
               return (
-                <Product title={product.title} price={product.price} imageSource={product.imageSource} />
+                <Product {...product} />
               )
             })}
         </MenuStyled>
@@ -28,7 +28,7 @@ const MenuStyled = styled.div`
     justify-items: center;
     box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
 
-    /* .product {
+    .product {
       background: red;
       width: 240px;
       height: 330px;
@@ -49,5 +49,5 @@ const MenuStyled = styled.div`
         border: 1px solid fuchsia;
       }
 
-    } */
+    }
 `;

@@ -1,29 +1,30 @@
-import styled from "styled-components"
-import { theme } from "../../theme"
+import styled from "styled-components";
+import { theme } from "../../theme";
 import PrimaryButton from "./PrimaryButton"
-import { formatPrice } from "../../utils/maths"
+import { formatPrice } from "../../utils/maths";
 
-export default function Card({ title, imageSource, price }) {
-  return (
-    <CardStyled className="produit">
-      <div className="image">
-        <img src={imageSource} alt={title} />
-      </div>
-      <div className="text-info">
-        <div className="title">{title}</div>
-        <div className="description">
-          <div className="left-description">{price}</div>
-          <div className="right-description">
-            <PrimaryButton className="primary-button" label={"Ajouter"} />
-          </div>
-        </div>
-      </div>
-    </CardStyled>
-  )
+export default function Card({title, imageSource, leftDescription}) {
+    return (
+        <CardStyled className="product">
+            <div className="image">
+                <img src={imageSource} alt={title} />
+            </div>
+          
+            <div className="text-info">
+                <div className="title">{title}</div>
+                <div className="description">
+                  <div className="left-description">{leftDescription}</div>
+                  <div className="right-description">
+                      <PrimaryButton className="primary-button" label={"Ajouter"} />
+                  </div>
+                </div>
+            </div>
+        </CardStyled>
+    )
 }
 
 const CardStyled = styled.div`
-  background: ${theme.colors.white};
+background: ${theme.colors.white};
   width: 200px;
   height: 300px;
   display: grid;

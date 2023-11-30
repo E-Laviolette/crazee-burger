@@ -3,28 +3,28 @@ import styled from "styled-components"
 import { fakeMenu2 } from "../../../../fakeData/fakeMenu"
 import { theme } from "../../../../theme"
 import { formatPrice } from "../../../../utils/maths"
-import Product from "./Product"
+import Card from "../../../reusable-ui/Card"
 
 export default function Menu() {
   const [menu, setMenu] = useState(fakeMenu2)
 
   return (
-    <ProductStyled className="menu">
+    <CardStyled className="menu">
       {menu.map(({ id, title, imageSource, price }) => {
         return (
-          <Product
+          <Card
             key={id}
             title={title}
             imageSource={imageSource}
-            price={formatPrice(price)}
+            leftDescription={formatPrice(price)}
           />
         )
       })}
-    </ProductStyled>
+    </CardStyled>
   )
 }
 
-const ProductStyled = styled.div`
+const CardStyled = styled.div`
   background: ${theme.colors.background_white};
   display: grid;
   grid-template-columns: repeat(4, 1fr);

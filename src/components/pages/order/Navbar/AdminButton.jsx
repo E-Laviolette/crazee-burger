@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { theme } from "../../../../theme";
-import ToastContainer from "./ToastContainer";
 
 export default function AdminButton({
     isChecked, 
@@ -26,7 +25,6 @@ export default function AdminButton({
                 data-checked={labelIfChecked}
                 data-unchecked={labelIfUnchecked}
             />
-            <ToastContainer className="toaster" bodyClassName="body-toast" />
         </AdminButtonStyled>
     )
 }

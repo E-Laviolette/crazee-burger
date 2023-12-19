@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 import Profile from './Profile';
 import AdminButton from './AdminButton';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { FaUserSecret } from "react-icons/fa";
 import ToastAdmin from './ToastAdmin';
 import { toast } from 'react-toastify';
+import OrderContext from '../../../../context/OrderContext';
 
-export default function NavbarRightSide({username}) {
+export default function NavbarRightSide() {
 
-    const [isModeAdmin, setIsModeAdmin] = useState(false)
+    // const [isModeAdmin, setIsModeAdmin] = useState(true)
+    const {isModeAdmin, setIsModeAdmin} = useContext(OrderContext)
 
     const displayToastNotification = () => {
         if (!isModeAdmin) {
@@ -31,11 +33,12 @@ export default function NavbarRightSide({username}) {
   return (
     <NavbarRightSideStyled className='right-side'>
       <AdminButton 
+          isChecked={isModeAdmin}
           labelIfUnchecked="ACTIVER LE MODE ADMIN" 
           labelIfChecked="DESACTIVER LE MODE ADMIN"
           onToggle={displayToastNotification}
       />
-      <Profile username={username}/>
+      <Profile />
       <ToastAdmin />
     </NavbarRightSideStyled>
   )

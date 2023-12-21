@@ -42,7 +42,7 @@ const TabStyled = styled.button`
     border-bottom-left-radius: 0px;
 
     :hover {
-        border-bottom: 2px solid ${theme.colors.white};
+        /* border-bottom: 2px solid ${theme.colors.white}; */
     }
     
     .icon {

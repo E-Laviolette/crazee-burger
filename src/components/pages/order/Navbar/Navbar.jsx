@@ -6,7 +6,7 @@ import Logo from '../../../reusable-ui/Logo';
 import { refreshPage } from '../../../../utils/window';
 import NavbarRightSide from './NavbarRightSide';
 
-export default function Navbar({username}) {
+export default function Navbar() {
 
     // const {username} = useParams()
 
@@ -14,7 +14,7 @@ export default function Navbar({username}) {
   return (
     <NavbarStyled>
         <Logo className="logo-order-page" onClick={refreshPage}/>
-        <NavbarRightSide username={username}/>
+        <NavbarRightSide />
     </NavbarStyled>
   )
 }
